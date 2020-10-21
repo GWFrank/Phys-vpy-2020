@@ -1,0 +1,20 @@
+You need to hand in your homework with a filename extension ‘.py’.
+If you are writing your homework in Jupyter, you need to extract 
+the complete runnable codes and save them in just one ‘.py’ file.
+
+A ball, whose radius is size = 0.25, at initial position = 
+vec(-15, size, 0), with initial velocity ball.v = vec(20*cos(theta), 20*sin(theta), 0) and theta = pi/4, is launched with a linear air drag of drag Coefficient
+C_drag = 0.9 . When the ball hits the ground, it bounces elastically.
+
+(1) Plot the trajectory of the ball and stop the ball when it hits 
+the ground for 3 times. Also add at the center of the ball an arrow
+, which moves along with the ball and whose length is 
+proportional (proportional constant by your choice) to and parallel
+to the velocity vector of the ball.
+
+(2) Plot a graph of speed (magnitude of the velocity) of the ball versus time.
+
+(3) Show both the displacement of the ball and the total distance travelled by the ball. Note: in python, x**p
+means x to the power p = x p .
+
+(4) Show the largest height of the ball during the entire process.

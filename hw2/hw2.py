@@ -1,10 +1,11 @@
+# this program takes one input N as number of balls lifted
 from vpython import *
 
 t = 0
 dt = 0.0001
 k = 150000
 g = vector(0, -9.8, 0)
-N = 2
+N = eval(input("lifted ball number : "))
 mass = 1
 radius = 0.2
 rope_len = 2
@@ -15,8 +16,8 @@ my_grey = vec(0.6, 0.6, 0.6)
 ke_ug_graph = graph(width=400, height=400, align="right",
                     title="<i>U<sub>g</sub></i> & <i>K.E.</i> - <i>t</i>", xtitle="<i>t</i>",
                     foreground=color.black, background=vec(0.05, 0.05, 0.05),
-                    ymin=0, ymax=1.2)
-ke_curve = gcurve(graph=ke_ug_graph, color=color.blue,
+                    ymin=0)
+ke_curve = gcurve(graph=ke_ug_graph, color=color.cyan,
                   width=4, label="<i>K.E.</i>")
 ug_curve = gcurve(graph=ke_ug_graph, color=color.green,
                   width=4, label="<i>U</i><sub>g</sub>")
@@ -24,8 +25,8 @@ ug_curve = gcurve(graph=ke_ug_graph, color=color.green,
 avg_ke_ug_graph = graph(width=400, height=400, align="right",
                         title="average <i>U</i><sub>g</sub></i> & <i>K.E.</i> - <i>t</i>", xtitle="<i>t</i>",
                         foreground=color.black, background=vec(0.05, 0.05, 0.05),
-                        ymin=0, ymax=1.2)
-avg_ke_curve = gcurve(graph=avg_ke_ug_graph, color=color.blue,
+                        ymin=0)
+avg_ke_curve = gcurve(graph=avg_ke_ug_graph, color=color.cyan,
                       width=4, label="average <i>K.E.</i>")
 avg_ug_curve = gcurve(graph=avg_ke_ug_graph, color=color.green,
                       width=4, label="average <i>U</i><sub>g</sub>")
@@ -81,7 +82,8 @@ for i in cradle:
 
 while True:
     rate(5000)
-    
+    # rate(10000)
+
     t += dt
     for i in cradle:
         i.cal_pos(dt)
